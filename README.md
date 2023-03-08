@@ -1147,12 +1147,16 @@ Le indicamos que comience y entonces ya solo nos quedará esperar a que se termi
 
 ![Bacula](capturas/30.png)
 
+-
+
+![Bacula](capturas/31.png)
+
 Una vez finalizada la restauración, nos conectaremos a la máquina Charlie y comprobaremos que se ha restaurado correctamente. Para ello reinstalaremos todos los paquetes que teníamos instalados en la máquina original:
 ```bash
 apt reinstall ~i
 ```
 
-![Bacula](capturas/31.png)
+![Bacula](capturas/32.png)
 
 En caso de que fuera Bravo (Rocky Linux), ejecutaríamos el siguiente comando:
 ```bash
@@ -1161,4 +1165,23 @@ dnf reinstall \*
 
 Esperaremos a que se reinstalen todos los paquetes, y tras esto podremos reinciar la máquina y comprobar que se ha restaurado correctamente.
 
-![Bacula](capturas/32.png)
+Voy a comprobar que se ha restaurado correctamente haciendo uso del servicio de LDAP:
+```bash
+su - prueba
+```
+
+![Bacula](capturas/33.png)
+
+Y desde alfa haré una consulta DNS ya que Charlie es el servidor de DNS:
+```bash
+dig charlie.ivan.gonzalonazareno.org
+```
+
+![Bacula](capturas/34.png)
+
+Voy a comprobar que desde la bconsole Delta sigue teniendo conexión con Charlie:
+```bash
+status client=charlie-fd
+```
+
+![Bacula](capturas/35.png)

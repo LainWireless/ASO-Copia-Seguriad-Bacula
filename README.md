@@ -1172,6 +1172,14 @@ su - prueba
 
 ![Bacula](capturas/33.png)
 
+-
+
+![Bacula](capturas/36.png)
+
+-
+
+![Bacula](capturas/37.png)
+
 Y desde alfa haré una consulta DNS ya que Charlie es el servidor de DNS:
 ```bash
 dig charlie.ivan.gonzalonazareno.org
